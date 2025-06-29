@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Service</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="booking-page">
+  <div class="form-section">
+    <h2>📋 Service Booking Form</h2>
+    <form id="bookingForm">
+      <div class="form-item">
+        <label>👤Name</label>
+        <input type="text" id="name" required />
+      </div>
+      <div class="form-item">
+        <label>📞Phone Number</label>
+        <input type="tel" id="phone" pattern="[0-9]{10}" required />
+      </div>
+      <div class="form-item">
+        <label>📍Address</label>
+        <textarea id="address" rows="2" required></textarea>
+      </div>
+      <div class="form-item">
+        <label>🧰Service</label>
+       <input type="text" id="service" readonly />
+
+
+      </div>
+      <div class="form-item">
+        <label>📅Date</label>
+        <input type="date" id="date" required />
+      </div>
+      <div class="form-item">
+        <label>⏰Time</label>
+        <select id="time" required>
+          <option value="">-- Choose --</option>
+          <option>Morning</option>
+          <option>Afternoon</option>
+          <option>Evening</option>
+        </select>
+      </div>
+      <div class="form-item button-group">
+        <button type="submit" class="submit-btn">✅ Confirm Booking</button>
+      </div>
+    </form>
+    <div id="confirmation" class="hidden">
+      <h3>✅ Booking Confirmed!</h3>
+      <p id="summary"></p>
+    </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
